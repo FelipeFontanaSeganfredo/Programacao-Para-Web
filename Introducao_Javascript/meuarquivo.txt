@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "CSS3",
+    "ano": 2020
+  },
+  {
+    "nome": "HTML5",
+    "ano": 2018
+  },
+  [
+    {
+      "nome": "Livro de Algebra",
+      "ano": 2022
+    }
+  ],
+  [
+    {
+      "nome": "Livro de Algebra",
+      "ano": 2022
+    }
+  ]
+]
