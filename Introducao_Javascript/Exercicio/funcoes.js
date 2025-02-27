@@ -41,10 +41,8 @@ function b (objeto, arquivo)
         let dadosArquivo = fs.readFileSync(arquivo).toString('UTF-8');
         let dadosJSON = JSON.parse(dadosArquivo);
         
-        // Adiciona o novo objeto à coleção
         dadosJSON.push(objeto);
 
-        // Escreve de volta no arquivo com o novo objeto
         dadosJSON = JSON.stringify(dadosJSON, null, 2);
         fs.writeFileSync(arquivo, dadosJSON, 'utf-8');
     }
@@ -65,4 +63,22 @@ function c (nomeAtributo, caminho) {
     }
 }
 
-console.log(c(`HTML5`, `../meuarquivo.txt`))
+
+function d (nomeAtributo, caminho) {
+    try {
+        let dadosArquivo = fs.readFileSync(caminho).toString('UTF-8');
+        let dadosJSON = JSON.parse(dadosArquivo);
+
+        let dadosLimpos = dadosJSON.filter((registro) => (registro.nome != nomeAtributo))
+
+        console.log(dadosLimpos);
+        
+        fs.writeFileSync(caminho, JSON.stringify(dadosLimpos, null, 2));
+    }
+    catch (err)
+    {
+        console.log(err);
+    }
+}
+
+module.exports = {a, b, c, d}
