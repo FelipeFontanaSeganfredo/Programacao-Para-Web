@@ -4,7 +4,7 @@
     "ano": 2020
   },
   {
-    "nome": "HTML5".
+    "nome": "HTML5",
     "ano": 2018
   },
   [

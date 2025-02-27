@@ -74,6 +74,8 @@ function d (nomeAtributo, caminho) {
         console.log(dadosLimpos);
         
         fs.writeFileSync(caminho, JSON.stringify(dadosLimpos, null, 2));
+
+        console.log('Objeto removido com sucesso!');
     }
     catch (err)
     {

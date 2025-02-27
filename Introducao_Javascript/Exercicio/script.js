@@ -1,6 +1,4 @@
 const funcoes = require('./funcoes')
-const fs = require('fs');
-
 
 funcoes.a('meuarquivo.txt');
 
@@ -9,4 +7,11 @@ let objeto = {
     ano: 2020
 }
 
-funcoes.b(objeto, 'meuarquivo.txt');
+//funcoes.b(objeto, 'meuarquivo.txt');
+
+console.log('Após inserção: ');
+funcoes.a('meuarquivo.txt');
+
+console.log(funcoes.c('React', 'meuarquivo.txt'));
+
+funcoes.d('React', 'meuarquivo.txt');
